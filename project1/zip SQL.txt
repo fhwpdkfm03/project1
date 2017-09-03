@@ -1,0 +1,32 @@
+create table zipcode(
+	ZIPCODE varchar(100) not null,
+	SIDO varchar(100) not null,
+	GUGUN varchar(200) not null,
+	DONG varchar(200) not null,
+	RI varchar(500) null,
+	BUNJI varchar(300) null,
+	SEQ int null
+);
+
+show tables;
+
+select * from zipcode
+
+
+
+C:\Users\cis\Desktop\CSV
+
+
+LOAD DATA
+LOCAL INFILE 'C:/Users/cis/Desktop/CSV/zipcode.csv'
+IGNORE INTO TABLE zipcode
+CHARACTER SET utf8
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS
+(field_no, @val1, @val2, @val3)
+SET code = CASE WHEN @val3 > '' THEN @val3
+                WHEN @val2 > '' THEN @val2
+                ELSE @val1 END,
+    name = TRIM(concat(@val1, @val2, @val3))
+;
