@@ -35,7 +35,7 @@
 	<!--// 글 목록 끝 -->
 
 	<!-- 목록 페이지 하단부의 쓰기버튼+검색폼+페이지 번호 공통 영역 include -->
-	<%-- <%@ include file="/WEB-INF/inc/bbs_list_bottom.jsp" %>	 --%>
+	<%@ include file="/WEB-INF/inc/bbs_list_bottom.jsp" %>
 		
 </div>
 <%@ include file="/WEB-INF/inc/footer.jsp" %>
